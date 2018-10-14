@@ -1,0 +1,113 @@
+{
+  "_id": "runitwhenimdead",
+  "_rev": "2-94b5e30e2891e642e53e0af2c335044f",
+  "name": "runitwhenimdead",
+  "dist-tags": {
+    "latest": "1.0.1"
+  },
+  "versions": {
+    "1.0.0": {
+      "name": "runitwhenimdead",
+      "version": "1.0.0",
+      "description":"☠ Automatically code execution when you're dead",
+      "main": "index.js",
+      "scripts": [
+        null
+      ],
+      "keywords": [
+        null
+      ],
+      "author": [
+        null
+      ],
+      "license": "MIT",
+      "dependencies": [
+        null
+      ],
+      "gitHead": "63363ee87fe541b24d04ae13dbea0c81f24a0dc3",
+      "_id": "runitwhenimdead@1.0.0",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "8.9.3",
+      "_npmUser": [
+        null
+      ],
+      "dist": [
+        null
+      ],
+      "maintainers": [
+        null
+      ],
+      "directories": {},
+      "_npmOperationalInternal": [
+        null
+      ],
+      "_hasShrinkwrap": false
+    },
+    "1.0.1": {
+      "name": "runitwhenimdead",
+      "version": "1.0.1",
+      "description":"☠ Automatically code execution when you're dead",
+      "main": "index.js",
+      "scripts": [
+        null
+      ],
+      "keywords": [
+        null
+      ],
+      "author": [
+        null
+      ],
+      "license": "MIT",
+      "dependencies": [
+        null
+      ],
+      "gitHead": "63363ee87fe541b24d04ae13dbea0c81f24a0dc3",
+      "_id": "runitwhenimdead@1.0.1",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "8.9.3",
+      "_npmUser": [
+        null
+      ],
+      "dist": [
+        null
+      ],
+      "maintainers": [
+        null
+      ],
+      "directories": {},
+      "_npmOperationalInternal": [
+        null
+      ],
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2018-10-14T19: 19: 18.147Z",
+    "1.0.0": "2018-10-14T19: 19: 18.273Z",
+    "modified": "2018-10-14T19: 25: 35.622Z",
+    "1.0.1": "2018-10-14T19: 25: 29.904Z"
+  },
+  "maintainers": [
+    {
+      "name": "rufatmammadli",
+      "email": "rufatmdl@gmail.com"
+    }
+  ],
+  "description":"☠ Automatically code execution when you're dead",
+  "keywords": [
+    "dead",
+    "run",
+    "facebook",
+    "remembering",
+    "memorized",
+    "code",
+    "RIP"
+  ],
+  "author": {
+    "name": "Rufat Mammadli",
+    "url": "@rufatmammadli, @oop"
+  },
+  "license": "MIT",
+  "readme":"☠ Run It When I'm Dead\\r\\n-------------\\r\\n##### Automatically code execution when you're dead\\r\\n###### by [@rufatmammadli](https: //twitter.com/rufatmammadli)\\r\\n\\r\\n#### Why?\\r\\nI'm not depressed, just bored. Enjoy it. 🤘\\r\\n\\r\\n#### How it works?\\r\\nAs you know, Facebook adds 'Remembering' label on the dead people's profile (when their families or friends requests). Basically, the code is fetching the profile page in a specified interval and looking for the 'Remembering' tag. I'm using [puppeteer](https://github.com/GoogleChrome/puppeteer) library for fetching and DOM operations.\\r\\n\\r\\n#### Usage\\r\\n1. npm install - Install the all dependencies.\\r\\n2. Paste the public Facebook profile URL into 'profileURL'.\\r\\n3. npm start - Start demo app.\\r\\n\\r\\n#### Push Notification via chatbots\\r\\nIf you want to send push notifications via Messenger or Telegram, enable the integrated BotDelive configuration and follow these steps:\\r\\n1. [Create an account](https://botdelive.com/login).\\r\\n2. Create an app on the dashboard to get appId and secretKey credentials.\\r\\n3. Add appId, secretKey, userId and message:\\r\\n```javascript\\r\\nlet init = new riwimd({\\r\\n    profileURL: \"<FACEBOOK_PUBLIC_PROFILE_URL>\",\\r\\n    timer: 1000,\\r\\n    appId: \"<BotDelive_APP_ID>\",\\r\\n    secretKey: \"<BotDelive_SECRET_KEY>\",\\r\\n    userId: \"<BotDelive_USER_ID>\",\\r\\n    message: \"<PUSH_MESSAGE>\"\\r\\n});\\r\\n```\\r\\nComplete documentation available at: [https://botdelive.com/docs](https://botdelive.com/docs)\\r\\n\\r\\n#### Example\\r\\n```javascript\\r\\nconst riwimd = require('runitwhenimdead');\\r\\n\\r\\n// Initialization\\r\\nlet init = new riwimd({\\r\\n    profileURL: \"<FACEBOOK_PUBLIC_PROFILE_URL>\", // public facebook profile url\\r\\n    timer: 1000, // scan interval in ms\\r\\n\\r\\n    // SEND PUSH NOTIFICATION VIA MESSENGER, TELEGRAM WHEN YOU'RE DEAD\\r\\n    // SIGN UP AT https://botdelive.com\\r\\n\\r\\n    // appId: \"<BotDelive_APP_ID>\",\\r\\n    // secretKey: \"<BotDelive_SECRET_KEY>\",\\r\\n    // userId: \"<BotDelive_USER_ID>\",\\r\\n    // message: \"<PUSH_MESSAGE>\"\\r\\n});\\r\\n\\r\\n// Start scanner\\r\\ninit.Start();\\r\\n\\r\\n// Listen 'watch' event\\r\\ninit.on('watch', (data) => {\\r\\n   console.log(data)\\r\\n});\\r\\n```",
+  "readmeFilename": "README.md"
+}
