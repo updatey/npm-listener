@@ -2,11 +2,11 @@
   "name": "npm-listener",
   "private": true,
   "description": "This happy little process listens for changes to the public npm registry CouchDB database, and publishes them to a Google Cloud Pub/Sub Topic.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "nyc mocha",
-    "start": "node index.js",
-    "deploy": "",
+    "start": "node src/index.js",
+    "deploy": "update.sh",
     "fix": "semistandard --fix --env mocha"
   },
   "author": "Justin Beckwith <justin.beckwith@gmail.com>",
