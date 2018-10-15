@@ -14,7 +14,17 @@ spec:
       labels:
         app: npm-listener
     spec:
+      volumes:
+      - name: google-cloud-key
+        secret:
+          secretName: npm-listener
       containers:
       - name: npm-listener
         image: gcr.io/updateyapp/npmlistener:latest
         imagePullPolicy: Always
+        volumeMounts:
+        - name: google-cloud-key
+          mountPath: /var/secrets/google
+        env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /var/secrets/google/key.json
